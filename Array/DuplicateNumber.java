@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SwapAlternative {
+public class DuplicateNumber {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int t = scn.nextInt();
@@ -10,18 +10,19 @@ public class SwapAlternative {
             for (int i = 0; i < n; i++) {
                 arr[i] = scn.nextInt();
             }
-            int i=0,j=1;
-            while(j<n){
-                int k=arr[i];
-                arr[i]=arr[j];
-                arr[j]=k;
-                i+=2;
-                j+=2;
+            int c=0;
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    if(arr[j]==i){
+                        c++;
+                    }
+                }
+                if(c==2){
+                    System.out.println(i);
+                    break;
+                }
+                c=0;
             }
-            for(int a=0;a<n;a++){
-                System.out.print(arr[a]+" ");
-            }
-            System.out.println();
             t--;
         }
     }
