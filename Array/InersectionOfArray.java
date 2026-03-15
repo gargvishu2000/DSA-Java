@@ -24,6 +24,7 @@ public class InersectionOfArray {
                     if(arr[i]==arr2[j] && check[j]==false){
                         System.out.print(arr[i]+" ");
                         check[j]=true;
+                        break;
                     }
                 }
             }
