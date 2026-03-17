@@ -1,12 +1,11 @@
-package TwoDArray;
-
 import java.util.Scanner;
 
-public class RowOrder {
+public class SearchArray {
     public static void main(String[] args) {
         Scanner scn=new Scanner(System.in);
         int n=scn.nextInt();
         int m=scn.nextInt();
+        int x=scn.nextInt();
         int[][] arr=new int[n][m];
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
@@ -15,9 +14,12 @@ public class RowOrder {
         }
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-               System.out.print(arr[i][j]+" ");
+                if(arr[i][j]==x){
+                    System.out.println("true");
+                    return;
+                }
             }
-            System.out.println();
         }
+        System.out.println("false");
     }
 }

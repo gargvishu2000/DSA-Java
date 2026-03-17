@@ -1,10 +1,8 @@
-
-
 import java.util.Scanner;
 
-public class ColoumOrder {
+public class Coloumsum {
     public static void main(String[] args) {
-        Scanner scn=new Scanner(System.in);
+         Scanner scn=new Scanner(System.in);
         int n=scn.nextInt();
         int m=scn.nextInt();
         int[][] arr=new int[n][m];
@@ -13,10 +11,12 @@ public class ColoumOrder {
                 arr[i][j]=scn.nextInt();
             }
         }
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-               System.out.print(arr[j][i]+" ");
+        for(int j=0;j<m;j++){
+            int sum=0;
+            for(int i=0;i<n;i++){
+                sum+=arr[i][j];
             }
+            System.out.print(sum+" ");
         }
     }
 }
