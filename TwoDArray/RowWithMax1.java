@@ -11,5 +11,17 @@ public class RowWithMax1 {
                 arr[i][j]=scn.nextInt();
             }
         }
+        int minRow=-1,cmax=0;
+        for(int i=0;i<n;i++){
+            int c=0;
+            for(int j=0;j<m;j++){
+                if(arr[i][j]==1) c++;
+            }
+            if(c>cmax){
+                minRow=i;
+                cmax=c;
+            }
+        }
+        System.out.println(minRow);
     }
 }
